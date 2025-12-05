@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+
 }
 
 :root {
@@ -42,7 +43,9 @@ a {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-.card img {
+.hebergements-card img {
+    height: 120px;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -74,6 +77,12 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+}
+
+.hebergements-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 /****** Populaires ***********/
@@ -121,7 +130,82 @@ a {
     margin-bottom: 5px;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+}
 
+.header.button {
+    display: flex;
+    align-items: flex-start;
+}
+
+.button-menu {
+    border: none;
+    border-top: 2px solid transparent;
+    background: none;
+    padding-top: 25px;
+}
+
+.button-menu:hover {
+    color: #0065FC;
+    border-top: 2px solid;
+}
+
+.logo {
+    width: 61.09px;
+    height: 19px;
+    padding: 30px 0px;
+}
+
+.search-group {
+    display: flex;
+    border: none;
+}
+
+.search-bar {
+    display: flex;
+    justify-items: flex-start;
+}
+
+.s-icon {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: solid;
+    border-radius: 15px 0 0 15px;
+}
+
+.submit {
+    border-radius: 0px 15px 15px 0px;
+    background-color: #0065FC;
+    color: white;
+}
+
+
+.submit2 {
+    display: none;
+    padding: o;
+}
+
+.filtres {
+    display: flex;
+    border: none;
+    gap: 15px;
+}
+
+.filtres-btn {
+    border-radius: 25px;
+    border: 2px;
+    display: flex;
+    align-items: center;
+;   border-color: #D9D9D9;
+    padding: 4px 19px 4px 19px;    
+}
+
+.hebergements-title {
+    margin: 0;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -163,5 +247,12 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .submit {
+        display: none;
+    }
+    
+    .submit2 {
+        display: initial;
+    }
+
 }
